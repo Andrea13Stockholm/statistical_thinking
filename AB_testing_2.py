@@ -1,4 +1,3 @@
-
 ##Ideal steps
 ##1. Design the experiment
 ##2. Data preparation
@@ -154,6 +153,7 @@ conversation_rates.columns = ["conversion_rate", "std_deviation", "std_error"]
 
 # Let's plot our results:
 
+
 g = sns.catplot(
     data=ab_test_df, x="group", y="converted", kind="bar", ci=95, aspect=0.95
 )
@@ -174,6 +174,7 @@ def result_subgroups(df, group, target):
     success = results.sum()
 
     return results, count, success
+
 
 control_res, n_control, success_control = result_subgroups(
     ab_test_df, "control", "converted"
